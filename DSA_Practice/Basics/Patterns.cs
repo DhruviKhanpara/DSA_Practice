@@ -79,7 +79,7 @@ namespace DSA_Practice.Basics
             // * *
             // *
 
-            Console.WriteLine("Method 1");
+            // Method 1
 
             for (int i = n; i > 0; i--)
             {
@@ -90,7 +90,7 @@ namespace DSA_Practice.Basics
                 Console.WriteLine();
             }
 
-            Console.WriteLine("Method 2");
+            // Method 2
 
             for (int i = 0; i < n; i++)
             {
@@ -101,7 +101,7 @@ namespace DSA_Practice.Basics
                 Console.WriteLine();
             }
 
-            Console.WriteLine("Method 3");
+            // Method 3
 
             for (int i = 0; i < n; i++)
             {

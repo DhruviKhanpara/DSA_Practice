@@ -8,10 +8,16 @@ namespace DSA_Practice
         {
             Console.WriteLine("Hello, World!");
 
-            Console.Write("Give a number input: ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("How many test case you have? ");
+            int t = Convert.ToInt32(Console.ReadLine());
 
-            Patterns.Pattern22(n);
+            for (int i = 0; i < t; i++)
+            {
+                Console.Write("Give a number input: ");
+                int n = Convert.ToInt32(Console.ReadLine());
+
+                BasicMaths.IsPrime(n);
+            }
         }
     }
 }
