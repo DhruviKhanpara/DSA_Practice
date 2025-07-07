@@ -16,7 +16,22 @@ namespace DSA_Practice
                 Console.Write("Give a number input: ");
                 int n = Convert.ToInt32(Console.ReadLine());
 
-                BasicMaths.IsPrime(n);
+                int[] a = new int[n];
+                for (int j = 0; j < n; j++)
+                {
+                    a[j] = Convert.ToInt32(Console.ReadLine());
+                }
+
+                Console.Write("Give a number query: ");
+                int m = Convert.ToInt32(Console.ReadLine());
+
+                int[] q = new int[m];
+                for (int j = 0; j < m; j++)
+                {
+                    q[j] = Convert.ToInt32(Console.ReadLine());
+                }
+
+                Hashing.UsingDictionary(a, q);
             }
         }
     }
