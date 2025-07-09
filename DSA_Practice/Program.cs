@@ -1,4 +1,6 @@
 ﻿using DSA_Practice.Basics;
+using DSA_Practice.SortingTechniques;
+using DSA_Practice.Utility;
 
 namespace DSA_Practice
 {
@@ -22,16 +24,17 @@ namespace DSA_Practice
                     a[j] = Convert.ToInt32(Console.ReadLine());
                 }
 
-                Console.Write("Give a number query: ");
-                int m = Convert.ToInt32(Console.ReadLine());
+                //Console.Write("Give a number query: ");
+                //int m = Convert.ToInt32(Console.ReadLine());
 
-                int[] q = new int[m];
-                for (int j = 0; j < m; j++)
-                {
-                    q[j] = Convert.ToInt32(Console.ReadLine());
-                }
+                //int[] q = new int[m];
+                //for (int j = 0; j < m; j++)
+                //{
+                //    q[j] = Convert.ToInt32(Console.ReadLine());
+                //}
 
-                Hashing.UsingDictionary(a, q);
+                QuickSort.Sort(a, 0, a.Length - 1);
+                PrintArray.Print(a);
             }
         }
     }

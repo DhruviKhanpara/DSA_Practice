@@ -1,4 +1,6 @@
-﻿namespace DSA_Practice.Basics;
+﻿using DSA_Practice.Utility;
+
+namespace DSA_Practice.Basics;
 
 public static class Recursion
 {
@@ -69,7 +71,7 @@ public static class Recursion
         {
             reverse[i] = a[n - i - 1];
         }
-        PrintArray(reverse, n);
+        PrintArray.Print(reverse);
 
         // Method 2: Space-optimized iterative method
         int p1 = 0, p2 = n - 1;
@@ -81,15 +83,15 @@ public static class Recursion
             p1++;
             p2--;
         }
-        PrintArray(a, n);
+        PrintArray.Print(a);
 
         // Method 3: Recursion
         ReverseArrayRecursion(a, 0, n - 1);
-        PrintArray(a, n); // Get original array because from Method 2 original array became reverse
+        PrintArray.Print(a); // Get original array because from Method 2 original array became reverse
 
         // Method 4: Using library function
         Array.Reverse(a);
-        PrintArray(a, n); // Get reverse array because from Method 3 reverse array became original
+        PrintArray.Print(a); // Get reverse array because from Method 3 reverse array became original
     }
 
     public static void IsPalindrome(string s)
@@ -144,7 +146,7 @@ public static class Recursion
                 nums[i] = nums[i - 1] + nums[i - 2];
             }
         }
-        PrintArray(nums, n + 1);
+        PrintArray.Print(nums);
 
         // Method 2: Space optimized
         if (n == 0)
@@ -236,14 +238,5 @@ public static class Recursion
         int sLast = FebonacciIntuition(idx - 2);
 
         return last + sLast;
-    }
-
-    private static void PrintArray(int[] a, int n)
-    {
-        for (int i = 0; i < n; i++)
-        {
-            Console.Write(a[i] + " ");
-        }
-        Console.WriteLine();
     }
 }
